@@ -1,0 +1,253 @@
+:root {
+  --dislay-color: #62a784;
+  --content-color: #424b58;
+  --border-color: #5e5c64;
+  --operand-color: #a8a9ac;
+  --operator-color: #ff9800;
+  --equals-color: #3d85ec;
+  --clear-color: #e95858;
+
+  --main-content-color: #f8f8f8;
+  --text-color: #3a3a3a;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #e4e4e4;
+  color: var(--text-color);
+}
+
+.container > a:hover {
+  cursor: pointer;
+}
+
+.nav-item {
+  margin: 0 5px;
+}
+
+.nav-link {
+  border: rgba(0, 0, 0, 0) 2px solid;
+  transition: all 1s;
+}
+
+.nav-link:hover {
+  background-color: rgba(87, 87, 87, 0.4);
+  border-radius: 5px;
+}
+
+.current {
+  background-color: #919191;
+  color: #3a3a3a;
+}
+
+.content-container {
+  max-width: 700px;
+}
+
+.content {
+  max-height: 100%; /*why going over boundaries when using vh?*/
+  background-color: var(--content-color);
+  border: var(--border-color) 2px solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-display {
+  flex: 1.5;
+  background-color: var(--dislay-color);
+  border: var(--border-color) 2px solid;
+  border-radius: 10px;
+  font-size: 6rem;
+  text-align: right;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.content-action {
+  flex: 4.5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5rem;
+}
+
+.button {
+  border: var(--border-color) 2px solid;
+  border-radius: 15px;
+  font-size: 3rem;
+  transition: all, 1ms;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.operator {
+  background-color: var(--operator-color);
+}
+
+.operator:active {
+  background-color: rgba(255, 152, 0, 0.8);
+  border: 2px whitesmoke solid;
+}
+
+.operand {
+  background-color: var(--operand-color);
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: 900;
+}
+
+.operand:active {
+  background-color: rgba(168, 169, 172, 0.8);
+}
+
+.remove-content {
+  background-color: var(--clear-color);
+}
+
+.remove-content:active {
+  background-color: rgba(233, 88, 88, 0.8);
+}
+
+.num-1 {
+  order: 13;
+}
+
+.num-2 {
+  order: 14;
+}
+
+.num-3 {
+  order: 15;
+}
+
+.num-4 {
+  order: 9;
+}
+
+.num-5 {
+  order: 10;
+}
+
+.num-6 {
+  order: 11;
+}
+
+.num-7 {
+  order: 5;
+}
+
+.num-8 {
+  order: 6;
+}
+
+.num-9 {
+  order: 7;
+}
+
+.num-0 {
+  order: 17;
+  grid-column: 1 / span 2;
+}
+
+.add {
+  order: 16;
+}
+
+.subtract {
+  order: 12;
+}
+
+.multiply {
+  order: 8;
+}
+
+.divide {
+  order: 4;
+}
+
+.percentage {
+  order: 3;
+}
+
+.decimal {
+  order: 18;
+}
+
+.equals {
+  background-color: var(--equals-color);
+  order: 19;
+}
+
+.equals:active {
+  background-color: rgba(61, 133, 236, 0.8);
+}
+
+.clear {
+  order: 1;
+  grid-column: 1 / span 3;
+}
+
+.alt-sign {
+  order: 2;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 1rem;
+}
+
+.about-content {
+  border: var(--border-color) 2px solid;
+}
+
+hr {
+  height: 10px;
+  width: 90%;
+  /* color: var(--border-color); */
+}
+
+.main-content {
+  background-color: var(--main-content-color);
+}
+
+.contact {
+  height: 100%;
+}
+
+.other {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.telephone,
+.post,
+.address {
+  display: flex;
+}
+
+h5 {
+  width: 100%;
+  display: inline-block;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  font-weight: 400;
+}
+
+footer p {
+  margin-bottom: 0px;
+}
+
+@media only screen and (min-width: 991px) {
+}
